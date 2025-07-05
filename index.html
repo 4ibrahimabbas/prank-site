@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacked!</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: monospace;
+      font-size: 2em;
+      text-align: center;
+      padding-top: 100px;
+      animation: flicker 0.1s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <p>⚠️ YOU ARE BEING HACKED ⚠️</p>
+  <audio autoplay loop>
+    <source src="hacked.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = 'leaked.pdf';
+      link.download = 'leaked.pdf';
+      link.click();
+    }, 2000);
+  </script>
+</body>
+</html>
